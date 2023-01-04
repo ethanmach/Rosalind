@@ -1,8 +1,8 @@
 def bp_count(seq: str):
     """
     This function counts the amount of DNA nucleotides in a DNA sequence and outputs the base pairs in A C T G format
-    :param seq:
-    :return:
+    :param seq: DNA sequence
+    :return: 4 integers in A C T G format
     """
     # Exception handling for sequences over 1000 base pairs
     if len(seq) > 1000:
