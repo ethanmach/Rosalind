@@ -1,6 +1,17 @@
-def recursive_rabbits(months, litter):
+def iterative_rabbits(months, litter):
+    """
+    This function takes a given number of 'months' and 'litter' and returns the total number of rabbit pairs that will
+    be present after n months. Begin with 1 pair of rabbits and in each generation, every pair of reproduction-age
+    rabbits produces a litter of k rabbit pairs (instead of only 1 pair)
+    :param months: The number of months
+    :param litter: The number of rabbit pairs produced by each litter
+    :return adults: Total number of rabbit pairs that will be present after n months
+    """
+    # initialize empty list for 'newborns' and counter for 'adults'
     newborns = []
     adults = 1
+
+    # main recurrence relation
     for i in range(months-1):
         if i == 0:
             newborns.append(litter)
@@ -12,4 +23,6 @@ def recursive_rabbits(months, litter):
 
 
 if __name__ == "__main__":
-    print(recursive_rabbits(31, 3))
+    n = int(input("What is the number of months? "))
+    k = int(input("What is the number of reproduction-age rabbits produced in one litter? "))
+    print(iterative_rabbits(n, k))
