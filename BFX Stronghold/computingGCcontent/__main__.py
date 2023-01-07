@@ -1,6 +1,6 @@
 from pathlib import Path
 import argparse
-from computing_gc_content import compute_gc
+from computingGCcontent.computing_gc_content import compute_gc
 
 # initialize argparse object, add input parameters
 arg_parser = argparse.ArgumentParser()
